@@ -14,6 +14,19 @@ export const insertText = async (
     // Create an object to create text and insert on current selection
     const text = currentSelection.insertText(textToInsert, Word.InsertLocation.after);
 
+    // Add Styles to the text inserted
+    text.set({
+      font: {
+        size: 12,
+        name: "ariel",
+        color: "red",
+        bold: true
+      }
+    });
+
+    // load the syled text object to word object model
+    context.load(text);
+
     // insert white space
     text.insertText(" ", Word.InsertLocation.after);
   });
@@ -26,7 +39,7 @@ export const insertText = async (
  */
 export const insertParagraph = async (
   _e: React.MouseEvent,
-  paragraphToInsert: string = "This is the example to insert paragraph at cursor position.\nThis is the new line of the pragraph.\n\nThank you."
+  paragraphToInsert: string = "This is the example to insert paragraph at cursor position.This is the new line of the pragraph.Thank you."
 ) => {
   return Word.run(async context => {
     // Find current selection in the document
