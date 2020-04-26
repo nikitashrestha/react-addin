@@ -1,13 +1,17 @@
 # Office-Addin-TaskPane-React
 
-This repository contains the source code used by the [Yo Office generator](https://github.com/OfficeDev/generator-office) when you create a new Office Add-in that appears in the task pane. You can also use this repository as a sample to base your own project from if you choose not to use the generator.
+This repository contains the source code for the tutorial series [Creating Word Add In using Javascript](https://medium.com/@nikitashrestha_76084/creating-word-add-in-using-javascript-part-2-a3e682fe55fd).Follwing Features are included :
+
+- Getting started with project setup in master branch
+- Adding text and paragraph at cursor position in branch part 3
+- Adding image, html and tables at cursor position.
 
 ## To Get Started
 
-- [Clone the project and switch to the project folder]
-- [Install project dependencies. Run :- npm install ]
-- [To start the server:- npm run dev-server]
-- [Open MS-Word. Then Goto Insert option and then select My Add In options. Choose the add to sideload. The view may be different for different version of word]
+- Clone the project and switch to the project folder
+- Install project dependencies. Run :- npm install
+- To start the server:- npm run dev-server
+- Open MS-Word. Then Goto Insert option and then select My Add In options. Choose the add to sideload. The view may be different for different version of word
 
 ## TypeScript
 
