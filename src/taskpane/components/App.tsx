@@ -29,8 +29,9 @@ export default class App extends React.Component<AppProps> {
     return (
       <div className="ms-welcome">
         <Header logo="assets/logo-filled.png" title={this.props.title} message="Welcome" />
-        <ButtonDefaultExample text="Insert Text" onBtnClick={WordInsertUtils.insertText} />
-        <ButtonDefaultExample text="Insert Paragraph" onBtnClick={WordInsertUtils.insertParagraph} />
+        <ButtonDefaultExample text="Insert Image" onBtnClick={WordInsertUtils.insertImage} />
+        <ButtonDefaultExample text="Insert HTML" onBtnClick={WordInsertUtils.insertHTML} />
+        <ButtonDefaultExample text="Insert Table" onBtnClick={WordInsertUtils.insertTable} />
       </div>
     );
   }
