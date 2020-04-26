@@ -11,8 +11,6 @@ export interface IButtonProps {
   onBtnClick: Function;
 }
 
-const stackTokens: IStackTokens = { childrenGap: 40 };
-
 const className = mergeStyleSets({
   button: {
     padding: 15,
@@ -40,16 +38,14 @@ export const ButtonDefaultExample: React.FunctionComponent<IButtonProps> = props
   const { disabled, checked, text, onBtnClick } = props;
 
   return (
-    <Stack horizontal tokens={stackTokens}>
-      <DefaultButton
-        className={className.button}
-        styles={CustomButtonStyles}
-        text={text}
-        onClick={e => onBtnClick(e)}
-        allowDisabledFocus
-        disabled={disabled}
-        checked={checked}
-      ></DefaultButton>
-    </Stack>
+    <DefaultButton
+      className={className.button}
+      styles={CustomButtonStyles}
+      text={text}
+      onClick={e => onBtnClick(e)}
+      allowDisabledFocus
+      disabled={disabled}
+      checked={checked}
+    ></DefaultButton>
   );
 };
