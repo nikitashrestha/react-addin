@@ -5,7 +5,10 @@ import Progress from "./Progress";
 import { ButtonDefaultExample } from "./Button";
 
 import * as WordInsertUtils from "./../utils/insert";
+import { IStackTokens, Stack } from "office-ui-fabric-react";
 /* global Button Header, HeroList, HeroListItem, Progress, Word */
+
+const stackTokens: IStackTokens = { childrenGap: 40, padding: 20 };
 
 export interface AppProps {
   title: string;
@@ -29,9 +32,11 @@ export default class App extends React.Component<AppProps> {
     return (
       <div className="ms-welcome">
         <Header logo="assets/logo-filled.png" title={this.props.title} message="Welcome" />
-        <ButtonDefaultExample text="Insert Image" onBtnClick={WordInsertUtils.insertImage} />
-        <ButtonDefaultExample text="Insert HTML" onBtnClick={WordInsertUtils.insertHTML} />
-        <ButtonDefaultExample text="Insert Table" onBtnClick={WordInsertUtils.insertTable} />
+        <Stack horizontal wrap tokens={stackTokens}>
+          <ButtonDefaultExample text="Insert Image" onBtnClick={WordInsertUtils.insertImage} />
+          <ButtonDefaultExample text="Insert HTML" onBtnClick={WordInsertUtils.insertHTML} />
+          <ButtonDefaultExample text="Insert Table" onBtnClick={WordInsertUtils.insertTable} />
+        </Stack>
       </div>
     );
   }
