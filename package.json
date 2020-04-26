@@ -69,7 +69,10 @@
     "typescript": "^3.6.3",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "minimist": ">=0.2.1",
+    "acorn": ">=7.1.1",
+    "kind-of": ">=6.0.3"
   },
   "prettier": "office-addin-prettier-config"
 }
